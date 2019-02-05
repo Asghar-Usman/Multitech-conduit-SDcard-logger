@@ -1,0 +1,21 @@
+#!/bin/bash
+fileNumber=1
+temp=1
+fileName="Data"
+while [ $temp -le 1 ] #
+
+do
+if [ -f "/media/card/$fileName$fileNumber.txt" ]
+then 
+#  echo "file found"
+  ((fileNumber++))
+else
+ 
+#  echo "file not found"
+  touch "/media/card/$fileName$fileNumber.txt"
+   mosquitto_sub -v -t "gateway/+/rx"  > /media/card/$fileName$fileNumber.txt
+   temp=2
+
+fi
+
+done
