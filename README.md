@@ -30,3 +30,5 @@ Now issue reboot command by writing
 in the terminal and press enter. 
 
 From now onwards every packets information will be stored inside the SD card. 
+
+Thank you 
